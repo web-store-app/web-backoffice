@@ -1,16 +1,14 @@
 import axios from 'axios';
 import { Customer, Order, OrderProduct, Product, Section, Store } from '../types';
 
-// Configuração padrão do Axios
 const api = axios.create({
   baseURL: 'http://localhost:3000/api',
   headers: {
     'Content-Type': 'application/json',
-    // Adicione outros cabeçalhos padrão se necessário
   },
 });
 
-// Funções CRUD para Customer
+// Customer
 export const getCustomers = async () => {
   return await api.get<Customer[]>('/customers');
 };
@@ -27,7 +25,7 @@ export const deleteCustomer = async (id: number) => {
   return await api.delete(`/customers/${id}`);
 };
 
-// Funções CRUD para Order
+// Order
 export const getOrders = async () => {
   return await api.get<Order[]>('/orders');
 };
@@ -44,7 +42,7 @@ export const deleteOrder = async (id: number) => {
   return await api.delete(`/orders/${id}`);
 };
 
-// Funções CRUD para OrderProduct
+// OrderProduct
 export const getOrderProducts = async () => {
   return await api.get<OrderProduct[]>('/order-products');
 };
@@ -61,7 +59,7 @@ export const deleteOrderProduct = async (id: number) => {
   return await api.delete(`/order-products/${id}`);
 };
 
-// Funções CRUD para Product
+// Product
 export const getProducts = async () => {
   return await api.get<Product[]>('/products');
 };
@@ -78,7 +76,7 @@ export const deleteProduct = async (id: number) => {
   return await api.delete(`/products/${id}`);
 };
 
-// Funções CRUD para Section
+// Section
 export const getSections = async () => {
   return await api.get<Section[]>('/sections');
 };
@@ -95,7 +93,7 @@ export const deleteSection = async (id: number) => {
   return await api.delete(`/sections/${id}`);
 };
 
-// Funções CRUD para Store
+// Store
 export const getStore = async () => {
   return await api.get<Store>('/store');
 };

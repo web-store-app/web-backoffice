@@ -1,0 +1,32 @@
+/* Resetando margens, padding e bordas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Removendo formatações padrão */
+  body, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  dl, dd, ol, ul, figure, hr, fieldset, legend {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
